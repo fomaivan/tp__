@@ -1,6 +1,7 @@
 #!/bin/bash
 
-in_fold=1 back_fold=1 arch_name=1 exten=1
+in_fold back_fold arch_name exten
+
 while [ -n "$1"]
 do
 case "$1" in
