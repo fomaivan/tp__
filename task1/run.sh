@@ -15,4 +15,4 @@ cd $in_fold
 mkdir $back_fold
 find  -name "*.$exten" -exec cp {} back_fold
 tar -czf $arch_name.tar.gz $back_fold
-
+$echo "done"
