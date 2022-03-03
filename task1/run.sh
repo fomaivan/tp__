@@ -11,6 +11,7 @@ case "$1" in
 ;;
 --backup_archive_name) arch_name = $2
 ;;
+esac
 shift
 shift
 done
