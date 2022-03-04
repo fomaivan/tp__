@@ -12,7 +12,8 @@ do
         arch_name="$2" ;;
         *)
     esac
-    shift shift
+    shift
+    shift
 done
 cd $in_fold
 mkdir ./$back_fold
