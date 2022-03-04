@@ -16,7 +16,8 @@ do
             ;;
         *)
     esac
-    shift shift
+    shift
+    shift
 done
 mkdir ./$back_fold
 find $in_fold -path "./$back_fold/*" -prune -o "*.$exten" -exec cp --parents "{}" ./$back_fold \;
