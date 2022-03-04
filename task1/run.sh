@@ -2,13 +2,13 @@
 while [ -n "$1" ]
 do
   case "$1" in
-    *input_folder)
+    --input_folder)
         in_fold="$2" ;;
-    *extension)
+    --extension)
         exten="$2" ;;
-    *backup_folder)
+    --backup_folder)
         back_fold="$2" ;;
-    *backup_archive_name)
+    --backup_archive_name)
         arch_name="$2" ;;
         *)
     esac
