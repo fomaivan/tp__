@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(${lib})
-set(HEADERS lib.h)
-set(SOURCES lib.cpp)
+project(library)
 
-add_library(lib SHARED ${HEADERS} ${SOURCES})
+set(HEADER lib.h)
+set(SOURCE lib.cpp)
+add_library(lib SHARED ${SOURCE} ${HEADER})
