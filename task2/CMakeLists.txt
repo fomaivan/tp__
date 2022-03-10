@@ -14,7 +14,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 
 
 add_executable(main "C/main.cpp" ${PROJECT_SOURCE_DIR}/A/index.h)
-add_executable(CTest "C/main_testing.cpp" ${PROJECT_SOURCE_DIR}/A/index.h)
+add_executable(CTest "C/main_test.cpp" ${PROJECT_SOURCE_DIR}/A/index.h)
 
 add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/A/index.h COMMAND python3 ${PROJECT_SOURCE_DIR}/A/preparing.py ${PROJECT_SOURCE_DIR}/A)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
