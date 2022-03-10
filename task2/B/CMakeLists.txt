@@ -4,4 +4,4 @@ project(${lib})
 set(HEADERS lib.h)
 set(SOURCES lib.cpp)
 
-add_executable(lib SHARED ${HEADERS} ${SOURCES})
+add_library(lib SHARED ${HEADERS} ${SOURCES})
