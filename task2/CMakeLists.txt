@@ -3,8 +3,6 @@ cmake_minimum_required(VERSION 3.0)
 project(Task2)
 
 find_package(GTest REQUIRED)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall")
-set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(B ${PROJECT_SOURCE_DIR}/lib)
 include_directories(${GTEST_INCLUDE_DIRS})
