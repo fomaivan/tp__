@@ -20,6 +20,5 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 target_link_libraries(main lib)
 target_link_libraries(CTest ${GTEST_LIBRARIES} pthread lib)
 
-target_include_directories(main PUBLIC "${CMAKE_CURRENT_LIST_DIR}")
 
 
