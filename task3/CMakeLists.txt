@@ -7,7 +7,7 @@ if(ARM_BUILD)
 	set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/arm-linux-gnueabihf-g++)
 endif(ARM_BUILD)
 
-project(SimpleLibrary)
+project(project)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
@@ -17,5 +17,5 @@ add_executable(Main main_first.cpp)
 add_executable(MainLib main_second.cpp)
 
 install(TARGETS Main DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
-install(TARGETS MainLib DESTINATION ${CMAKE_INSTALL_PREFIX}/bin PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
+install(TARGETS MainLib DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
