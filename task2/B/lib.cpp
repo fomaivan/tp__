@@ -1,3 +1,0 @@
-bool F() {
-  return true;
-}
