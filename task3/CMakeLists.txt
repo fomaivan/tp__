@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 2.9)
 
 if(ARM_BUILD)
 	set(CMAKE_SYSTEM_NAME Linux)
@@ -15,7 +15,6 @@ set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/lib)
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 add_executable(Main main_first.cpp)
 add_executable(MainLib main_second.cpp)
-
 install(TARGETS Main DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 install(TARGETS MainLib DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
