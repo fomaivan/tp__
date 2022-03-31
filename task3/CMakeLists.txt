@@ -3,8 +3,6 @@ cmake_minimum_required(VERSION 3.1)
 if(ARM_BUILD)
 	set(CMAKE_SYSTEM_NAME Linux)
 	set(CMAKE_SYSTEM_PROCESSOR arm)
-	set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/arm-linux-gnueabihf-g++)
-         set(CMAKE_C_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-gcc)
 endif(ARM_BUILD)
 
 project(Task3)
