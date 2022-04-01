@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 include_directories(include)
 
-set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/aarch64-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/aarch64-linux-gnu-g++)
 
 
 project(SimpleLibrary)
