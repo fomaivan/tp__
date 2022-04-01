@@ -2,9 +2,8 @@ cmake_minimum_required(VERSION 3.0)
 
 include_directories(include)
 
-
-set(CMAKE_C_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-gcc)
-set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/arm-linux-gnueabihf-gcc)
+set(CMAKE_C_COMPILE ${TOOLCHAIN}/aarch64-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/aarch64-linux-gnu-g++)
 
 
 project(SimpleLibrary)
