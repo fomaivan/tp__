@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.0)
 project(SimpleLibrary)
+include_directories(include)
 
 if(ARM_BUILD)
-	set(CMAKE_SYSTEM_NAME Linux)
-	set(CMAKE_SYSTEM_PROCESSOR arm)
-	set(CMAKE_C_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-gcc)
-	set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/arm-linux-gnueabihf-g++)
+     set(CMAKE_SYSTEM_NAME Linux)
+     set(CMAKE_SYSTEM_PROCESSOR arm)
+     set(CMAKE_C_COMPILER ${TOOLCHAIN}/arm-linux-gnueabihf-gcc)
+     set(CMAKE_CXX_COMPILE ${TOOLCHAIN}/arm-linux-gnueabihf-g++)
 endif(ARM_BUILD)
-include_directories(include)
 
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
