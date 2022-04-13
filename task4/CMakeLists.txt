@@ -13,7 +13,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Task4_SOURCE_DIR}/bin)
 
 add_subdirectory(B)
 add_subdirectory(C)
-add_subdirectory(${CMAKE_BINARY_DIR}/../$ENV{GOOGLE_TEST_DIR})
+add_subdirectory(${CMAKE_BINARY_DIR}/../3rdparty/$ENV{GOOGLE_TEST_DIR})
 
 
 install(
