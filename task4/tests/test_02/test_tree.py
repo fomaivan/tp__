@@ -14,19 +14,16 @@ def test_constructor():
     tree = Tree()
     assert FileNode('example.txt', False, []) == tree.construct_filenode('../example.txt', False)
 
-
-def test_update():
-    tree = Tree()
-    a = 6
-    assert tree.update_filenode(a) == 6
-
-
 def test_filter_file():
     tree = Tree()
     node = FileNode('example.txt', False, [])
     assert None == tree.filter_empty_nodes(node)
 
-
+def test_get_file_recursively():
+    tmp = tempfile.NamedTemporaryFile()
+    tree = Tree()
+    assert None == tree.get(tmp.name, True, True)
+    tmp.close()
 def test_filter_dir():
     tree = Tree()
     with tempfile.TemporaryDirectory() as first:
@@ -37,7 +34,11 @@ def test_filter_dir():
         node = FileNode(os.path.basename(first), True, [file, second])
         tree.filter_empty_nodes(node)
         assert False == os.path.exists('second')
-
+        
+def test_update():
+    tree = Tree()
+    a = 6
+    assert tree.update_filenode(a) == 6
 
 def test_get_with_wrong_path():
     with pytest.raises(AttributeError):
@@ -59,12 +60,6 @@ def test_get_file_with_error():
         tree.get(tmp.name, True)
         tmp.close()
 
-
-def test_get_file_recursively():
-    tmp = tempfile.NamedTemporaryFile()
-    tree = Tree()
-    assert None == tree.get(tmp.name, True, True)
-    tmp.close()
 
 
 def test_get_dir():
