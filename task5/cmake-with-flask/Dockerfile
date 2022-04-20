@@ -6,5 +6,5 @@ RUN apt-get update && \
     apt-get install -y cmake
 RUN cmake .. && \
     cmake --build . && \
-    make
+RUN make
 USER tp2022user
