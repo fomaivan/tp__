@@ -1,6 +1,6 @@
 FROM gcc:latest
+COPY . /opt/techprog
 WORKDIR /opt/techprog/build
-COPY . ../
 RUN apt-get update && \
 	apt-get install -y cmake
-CMD ["cmake .."]
+RUN cmake .. && cmake --build .
