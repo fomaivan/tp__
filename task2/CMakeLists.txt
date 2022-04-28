@@ -5,10 +5,10 @@ project(Task2)
 find_package(GTest REQUIRED)
 
 add_subdirectory(B ${PROJECT_SOURCE_DIR}/lib)
-target_include_directories(${GTEST_INCLUDE_DIRS})
-target_include_directories(A)
-target_include_directories(C)
-target_include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(A)
+include_directories(C)
+include_directories(${PROJECT_SOURCE_DIR})
 
 
 add_executable(main "C/main.cpp" ${PROJECT_SOURCE_DIR}/A/index.h)
@@ -19,5 +19,6 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 target_link_libraries(main lib)
 target_link_libraries(CTest ${GTEST_LIBRARIES} pthread lib)
+
 
 
