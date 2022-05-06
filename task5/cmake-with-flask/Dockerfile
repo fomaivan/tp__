@@ -4,9 +4,11 @@ WORKDIR /opt/techprog
 
 COPY . .
 
+WORKDIR /build
+
 RUN apt-get update && apt-get install -y build-essential cmake
 
-RUN cmake . && make
+RUN cmake .. && make
 
 RUN useradd -d /opt/techprog tp2022user
 
