@@ -1,8 +1,7 @@
 import pytest
 import requests_mock
 from src.weather_03.weather_wrapper import *
-
-api_key = 'af5e73ed09ab0d1e58288601abc94381'
+import config
 
 def test_get_response_city_error():
     wrapper = WeatherWrapper('')
